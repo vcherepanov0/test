@@ -117,7 +117,8 @@
                 package +
                 '&' +
                 encodeURIComponent(args);
-            url = url.replace('?&', '?').replace('&&', '&');
+            url = url.replace('?&', '?').replace('&&', '&').replace('&referrer%3D', '&referrer=');
+
             return url;
         }
 
